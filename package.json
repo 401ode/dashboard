@@ -4,7 +4,9 @@
   "scripts": {
     "install": "npm run browserify",
     "browserify": "browserify assets/js/preview.js -o assets/js/preview-bundle.js -t brfs",
-    "watchify": "watchify assets/js/preview.js -o assets/js/preview-bundle.js -t brfs"
+    "watchify": "watchify assets/js/preview.js -o assets/js/preview-bundle.js -t brfs",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=0.12.7"
@@ -28,6 +30,8 @@
     "sinon-chai": "^2.8.0",
     "underscore": "^1.8.3",
     "watchify": "^3.6.1",
-    "yamljs": "^0.2.4"
-  }
+    "yamljs": "^0.2.4",
+    "snyk": "^1.25.0"
+  },
+  "snyk": true
 }
